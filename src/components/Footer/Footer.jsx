@@ -1,5 +1,6 @@
 import React from "react";
 import { footerVariants, staggerChildren } from "../../utils/motion";
+import { FaLinkedin } from "react-icons/fa";
 import css from "./Footer.module.scss";
 import {motion} from 'framer-motion'
 const Footer = () => {
@@ -21,20 +22,20 @@ const Footer = () => {
             amazing together.
           </span>
           <span className="primaryText">
-            Start by <a href="mailto:zainkeepscode@gmail.com">saying hi</a>
+            Start by <a href="mailto:infoprodevstudio@gmail.com">saying hi</a>
           </span>
         </div>
 
         <div className={css.right}>
           <div className={css.info}>
             <span className="secondaryText">Information</span>
-            <p>145 New York, FL 5467, USA</p>
+            {/* <p>145 New York, FL 5467, USA</p> */}
           </div>
           <ul className={css.menu}>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Notes</li>
-            <li>Experience</li>
+            <a href="https://www.linkedin.com/company/prodev-studio/"><li>LinkedIn</li></a>
+            <a href="https://www.instagram.com/infoprodev/"><li>Instagram</li></a>
+            <a href="https://x.com/StudioProdev"><li>Twitter</li></a>
+            <li></li>
           </ul>
         </div>
       </motion.div>
