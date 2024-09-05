@@ -25,11 +25,55 @@ const Portfolio = () => {
         </motion.div>
 
 
-        <div className={`flexCenter ${css.showCase}`}>
-            {/* <motion.img variants={fadeIn("up", "tween", .5, .6)} src="./showCase1.png" alt="project" />
-            <motion.img variants={fadeIn("up", "tween", .7, .6)} src="./showCase2.png" alt="project" />
-            <motion.img variants={fadeIn("up", "tween", .9, .6)} src="./showCase3.png" alt="project" /> */}
-        </div>
+        
+
+<div className={`flexCenter ${css.showCase}`}>
+  <motion.a
+    href="https://yash24-03.github.io/Property/"
+    target="_blank"
+    variants={fadeIn("up", "tween", .5, .6)}
+    whileHover={{ scale: 1.05 }}
+  >
+    <motion.img src="./showCase1.png" alt="project 1" />
+  </motion.a>
+
+  <motion.a
+    href="https://yash24-03.github.io/Makan/"
+    target="_blank"
+    variants={fadeIn("up", "tween", .7, .6)}
+    whileHover={{ scale: 1.05 }}
+  >
+    <motion.img src="./showCase2.png" alt="project 2" />
+  </motion.a>
+
+  <motion.a
+    href="https://yash24-03.github.io/tour/"
+    target="_blank"
+    variants={fadeIn("up", "tween", .9, .6)}
+    whileHover={{ scale: 1.05 }}
+  >
+    <motion.img src="./showCase3.png" alt="project 3" />
+  </motion.a>
+
+  <motion.a
+    href="https://yash24-03.github.io/archiark/"
+    target="_blank"
+    variants={fadeIn("up", "tween", .9, .6)}
+    whileHover={{ scale: 1.05 }}
+  >
+    <motion.img src="./showCase4.png" alt="project 4" />
+  </motion.a>
+
+  <motion.a
+    href="https://yash24-03.github.io/photozone/"
+    target="_blank"
+    variants={fadeIn("up", "tween", .9, .6)}
+    whileHover={{ scale: 1.05 }}
+  >
+    <motion.img src="./showCase5.png" alt="project 5" />
+  </motion.a>
+</div>
+
       </div>
     </motion.section>
   );
