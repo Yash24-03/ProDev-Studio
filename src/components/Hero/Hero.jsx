@@ -32,7 +32,7 @@ const Hero = () => {
           <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./person.png" alt="" />
         </motion.div>
 
-        <a className={css.email} href="mailto:zainkeepscode@gmail.com">
+        <a className={css.email} href="mailto:yashwillbe@gmail.com">
           yashwillbe@gmail.com
         </a>
 
