@@ -11,11 +11,22 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
 
-  //to handle click outside of sidebar on mobile
+  // to handle click outside of sidebar on mobile
   useOutsideAlerter({
     menuRef,
     setMenuOpened,
   });
+
+  // Optional: Close the menu when resizing to larger screens
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setMenuOpened(false); // Close menu on larger screens
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <motion.div
@@ -24,19 +35,18 @@ const Header = () => {
       whileInView="show"
       className={`bg-primary paddings ${css.wrapper}`}
       viewport={{ once: true, amount: 0.25 }}
-      style={{boxShadow: headerShadow}}
+      style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
         <div className={css.name}>ProDev Studio</div>
         <ul
           className={`flexCenter ${css.menu}`}
           ref={menuRef}
-          style={getMenuStyles(menuOpened)}
+          style={getMenuStyles(menuOpened)} // Ensure this uses `menuOpened` state properly
         >
           <li><a href="#experties">Services</a></li>
           <li><a href="#work">Experience</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          {/* <li><a href="#people">Testimonials</a></li> */}
           <li className={`flexCenter ${css.phone}`}>
             <p>+91 88875 56406</p>
             <BiPhoneCall size={"40px"} />
